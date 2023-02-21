@@ -15,7 +15,7 @@ public class Movie implements Serializable {
     private Long id;
     private String title;
     private String subTitle;
-    private Integer yearsMovie;
+    private Integer years;
     private String imgUrl;
     @Column(columnDefinition = "TEXT")
     private String synopsis;
@@ -30,11 +30,11 @@ public class Movie implements Serializable {
     public Movie() {
     }
 
-    public Movie(Long id, String title, String subTitle, Integer yearsMovie, String imgUrl, String synopsis, Genre genre) {
+    public Movie(Long id, String title, String subTitle, Integer years, String imgUrl, String synopsis, Genre genre) {
         this.id = id;
         this.title = title;
         this.subTitle = subTitle;
-        this.yearsMovie = yearsMovie;
+        this.years = years;
         this.imgUrl = imgUrl;
         this.synopsis = synopsis;
         this.genre = genre;
@@ -64,12 +64,12 @@ public class Movie implements Serializable {
         this.subTitle = subTitle;
     }
 
-    public Integer getYear() {
-        return yearsMovie;
+    public Integer getYears() {
+        return years;
     }
 
-    public void setYear(Integer yearsMovie) {
-        this.yearsMovie = yearsMovie;
+    public void setYears(Integer years) {
+        this.years = years;
     }
 
     public String getImgUrl() {
@@ -109,7 +109,7 @@ public class Movie implements Serializable {
         if (this == o) return true;
         if (!(o instanceof Movie)) return false;
         Movie movie = (Movie) o;
-        return Objects.equals(getId(), movie.getId()) && Objects.equals(getTitle(), movie.getTitle()) && Objects.equals(getSubTitle(), movie.getSubTitle()) && Objects.equals(getYear(), movie.getYear()) && Objects.equals(getImgUrl(), movie.getImgUrl()) && Objects.equals(getSynopsis(), movie.getSynopsis()) && Objects.equals(getReviews(), movie.getReviews()) && Objects.equals(getGenre(), movie.getGenre());
+        return Objects.equals(getId(), movie.getId()) && Objects.equals(getTitle(), movie.getTitle()) && Objects.equals(getSubTitle(), movie.getSubTitle()) && Objects.equals(getYears(), movie.getYears()) && Objects.equals(getImgUrl(), movie.getImgUrl()) && Objects.equals(getSynopsis(), movie.getSynopsis()) && Objects.equals(getReviews(), movie.getReviews()) && Objects.equals(getGenre(), movie.getGenre());
     }
 
     @Override

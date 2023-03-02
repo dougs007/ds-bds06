@@ -15,7 +15,7 @@ public class Genre implements Serializable {
     private Long id;
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "genre")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "genre")
     private List<Movie> movies = new ArrayList<>();
 
     public Genre() {

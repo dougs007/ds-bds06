@@ -20,7 +20,7 @@ public class Movie implements Serializable {
     @Column(columnDefinition = "TEXT")
     private String synopsis;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "movie")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "movie")
     private List<Review> reviews = new ArrayList<>();
 
     @ManyToOne
